@@ -3,6 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',//开发者模式，最小化模式改为 production
+    devServer: {
+        contentBase: './dist',
+    },
     entry: './src/index.js',
     output: {
         filename: '[name].[contenthash].js',
